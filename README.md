@@ -241,6 +241,49 @@ Non Destructive Functions
   numberList // is still [0,1,2,3,4,5,6]
 ```
 
+### Iteration
+
+Many iterations are comparable to the ruby iterations. Here are a few examples:
+
+ForEach - Comparable to Ruby's Each
+
+```
+
+let array = ["Bob", "Sarah"]
+
+array.forEach(function(element) {
+  console.log(element)
+})
+
+// this would print out Bob first and then Sarah. forEach takes in a callback function and will pass each element in to the callback function. Much like we did in ruby when it was yielded into a block with do |element|.
+```
+
+Map - Comparable to ruby's map / collect
+
+```
+let array = ["Bob", "Sarah"]
+
+array.map(function(element) {
+  return element + "!";
+})
+
+// this would return a new array with ["Bob!", "Sarah!"]. Also take note that the return keyword is being used. You must return the value you wish to be in the modified array.
+```
+
+Filter - Comparable to ruby's select / find_all
+
+```
+let array = ["Bob", "Sarah"]
+
+array.filter(function(element) {
+  if(element.includes("a")) {
+    return element;
+  }
+})
+
+// this would give us back a new array and the result would be ["Sarah"] because Sarah has an "a" included in the name.
+```
+
 ### Objects
 
 Objects in Javascript are similiar to hashes in ruby with key / value pairs. For example:
